@@ -84,7 +84,7 @@
         margin-left: 10px;
         margin-right: 10px;
         padding-left: 5%;
-	      padding-right: 5%;
+	padding-right: 5%;
         text-align: justify;
         display: flex;
         flex-direction: row;
@@ -117,6 +117,18 @@
           display:flex;
           margin-right:80px;
       }
+
+	#model-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        pointer-events: none; 
+        }
+
+        body {
+        margin: 0;
+        overflow: hidden; 
+        }
 
       .carousel-section {
         margin-top: 40px;
@@ -160,6 +172,7 @@
         }
 
     </style>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
   </head>
@@ -284,7 +297,33 @@
           <img src="./image_5.png" alt="Image 5">
         </div>
       </div>
+      </div>
+    <div id="model-container"></div>
+    <script>
+      const scene = new THREE.Scene();
+      const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+      const renderer = new THREE.WebGLRenderer();
       
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      document.body.appendChild(renderer.domElement);
+
+      const loader = new THREE.OBJLoader();
+      loader.load(.manequin_with_cilinder.obj, function (object) {
+        scene.add(object);
+      });
+
+      camera.position.z = 5;
+      const animate = function () {
+        requestAnimationFrame(animate);
+
+        scene.rotation.y += 0.01;
+
+        renderer.render(scene, camera);
+      };
+
+      animate();
+	    
+    </script>
     <div class="footer">
       <div class="container">
         <p class="par1">&copy; 2023 ЭЛИТА – ALL RIGHTS RESERVED. <a href="https://nti2035.ru/markets/wearnet" target="_blank"> NTI WearNet</a> <a href="https://nti2035.ru/contacts/" target="_blank">NTI Contacts</a>
