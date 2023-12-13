@@ -265,7 +265,7 @@
         </div>
       </div>
     </div>
- <script type="importmap">
+  <script type="importmap">
     {
       "imports": {
         "three": "https://unpkg.com/three@0.159.0/build/three.module.js",
@@ -294,8 +294,6 @@
         }
       });
       scene.add(object);
-
-      renderer.render(scene, camera);
     });
 
     camera.position.z = 700;
@@ -306,6 +304,21 @@
     const directionalLight = new THREE.DirectionalLight(0xffffff, 0.5);
     directionalLight.position.set(5, 5, 5);
     scene.add(directionalLight);
+    function animate() {
+    requestAnimationFrame(animate);
+
+    scene.children.forEach(object => {
+      if (object instanceof THREE.Object3D) {
+        object.rotation.y += 0.01; 
+        object.rotation.x += 0.01;
+      }
+    });
+
+    renderer.render(scene, camera);
+  }
+
+  animate();
+
   </script>
 	
     <div class="carousel-section">
