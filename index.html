@@ -267,7 +267,50 @@
         </div>
       </div>
     </div>
+ <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.159.0/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three@0.159.0/examples/jsm/"
+      }
+    }
+  </script>
+</head>
+<body>
+  <script type="module">
+    import * as THREE from 'three';
+    import { OBJLoader } from 'three/addons/loaders/OBJLoader.js';
+    
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    const renderer = new THREE.WebGLRenderer();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    document.body.appendChild(renderer.domElement);
 
+    const loader = new OBJLoader();
+    loader.load('https://snowz0t.github.io/head.github.io/manequin_with_cilinder.obj', function (object) {
+      const material = new THREE.MeshBasicMaterial({ color: 0xffffff });
+      object.traverse(function (child) {
+        if (child instanceof THREE.Mesh) {
+          child.material = material;
+        }
+      });
+      scene.add(object);
+
+      // Render scene after the model is loaded
+      renderer.render(scene, camera);
+    });
+
+    camera.position.z = 700;
+
+    const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+    scene.add(ambientLight);
+
+    const directionalLight = new THREE.DirectionalLight(0xffffff, 0.5);
+    directionalLight.position.set(5, 5, 5);
+    scene.add(directionalLight);
+  </script>
+	
     <div class="carousel-section">
       <div class="owl-carousel owl-theme">
         <div class="item">
