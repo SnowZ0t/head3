@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MY Landing Page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     <style>
        body {
         font-family: 'Roboto', sans-serif;
         background-color: #f4f4f4;
         color: #333;
+        margin: 0;
       }
 
       .container {
@@ -41,6 +44,7 @@
         padding-bottom: 20px;
         padding-right: auto;
         padding-left: auto;
+        flex: 1;
       }
 
       .cta-button {
@@ -54,8 +58,8 @@
       }
       
         .video-section {
-	padding-left: 5%;
-	padding-right: 5%;
+        padding-left: 5%;
+	      padding-right: 5%;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -72,14 +76,13 @@
         flex: 1;
         margin: 0 10px;
       }
-
-	h2{
+      h2{
         color: #FF0000;
       } 
       .subtitle {
         margin-left: 20%;
         margin-right: 20%;
-	      
+      }     
       .text-block h2 {
           color: #FF0000;
           text-align: center;
@@ -91,7 +94,7 @@
         margin-left: 10px;
         margin-right: 10px;
         padding-left: 5%;
-	padding-right: 5%;
+	      padding-right: 5%;
         text-align: justify;
         display: flex;
         flex-direction: row;
@@ -121,11 +124,10 @@
         order: 1;
       }
       .par1{
-          display:flex;
           margin-right:80px;
       }
       
-	.model-container {
+      .model-container {
       max-width: auto;
       max-height: 400px;
       display: flex;
@@ -139,7 +141,8 @@
       max-height: auto;
       border: 2px solid #FF0000;
     }
-      .carousel-section {
+
+    .carousel-section {
         margin-top: 40px;
       }
 
@@ -148,50 +151,50 @@
       }
 
       .owl-item {
-        width: 100%;
+        width: 50%;
       }
 
       .owl-carousel img {
-        width: 100%;
-        height: 400px;
+        width: 50%;
+        height: 500px;
         object-fit: cover;
       }
-      
-      .footer {
-	max-height: 200px;
-        max-width: auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: #34495e;
-        color: #FF0000;
-        padding: 10px 0;
-        }
 
-        .footer a {
-        color: #FF0000;
-        text-decoration: none;
-        margin-left: 10px;
-        }
 
-        .footer a:hover {
-        text-decoration: underline;
-        }
+  .footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #34495e;
+    color: #FF0000;
+    padding: 10px 0;
+    bottom: 0px;
+    max-width: 100%;
+    }
 
-        .par1 {
-        margin-right: center;
-        }
+    .footer a {
+      color: #FF0000;
+      text-decoration: none;
+      margin-left: 10px;
+      }
 
+    .footer a:hover {
+      text-decoration: underline;
+      }
+    
+    .par1 {
+      margin-right: center;
+      }
     </style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
   </head>
-      <body>
+
+    <body>
     <div class="header">
       <div class="container">
-        <img class="headerimg" src="./logo.png" alt="Your Logo" style="max-width: 30%; height: auto;">
+        <img class="headerimg" src="https://i.imgur.com/vCW7D69.png" alt="Your Logo" style="max-width: 30%; height: auto;">
       </div>
     </div>
+
     <div class="main-content">
       <div class="container">
         <div class="text-content">
@@ -199,12 +202,13 @@
         <p class="subtitle"><br>В мире инновационных технологий и прогресса каждая сфера нашей жизни подлежит компьютеризации. не исключением является и фэшн-индустрия. 
           <br> Давайте же узнаем, какие планы на будущее у экспертов модной сферы, какие тенденции нас ждут и что за технологии будут использоваться?</p>
         <a href="https://nti2035.ru/markets/wearnet" class="cta-button">Wearnet</a>
+      </div>
         
-    <div class="video-section">
-      <div class="video">
+       <div class="video-section">
+       <div class="video">
         <iframe width="100%" height="315" src="https://www.youtube.com/embed/IgCxw1K8xa8" frameborder="0" allowfullscreen></iframe>
       </div>
-      <div class="description">
+       <div class="description">
             <h2 class ="video-title"> WEARNET: Что за проект и с чем его едят?</h2>
         <p>Что же нас ждет в будущем? Это вы узнаете в нашем видео!</p>
       </div>
@@ -232,7 +236,7 @@
             <br>Виртуальные примерочные находятся на начальном этапе развития, но их потенциал огромен. Эта технология может кардинально изменить наше отношение к онлайн-шопингу, сделав его более удобным, увлекательным и приятным для всех.
 </p>
           </div>
-          <img src="./virtualdressingroom.jpg" alt="Image 1" class="left-image">
+          <img src="https://i.imgur.com/EahhSxl.jpg" alt="Image 1" class="left-image">
         </div>
         
         <div class="text-block">
@@ -260,8 +264,9 @@
             В будущем, стилистам либо придется конкурировать с нейросетью, доказывая свою независимость, либо искусственный интеллект и стилисты будут взаимодействовать, создавая новую эру моды. 
             В любом случае, сейчас сфера моды потерпит перестройку во что-то невероятное, и мы будем зрителями этих событий.</p>
           </div>
-          <img src="./AIstylist.jpg" alt="Image 2" class="right-image">
+          <img src="https://i.imgur.com/QphKBd6.jpg" alt="Image 2" class="right-image">
         </div>
+
         <div class="text-block">
           <div class="text-content">
             <h2>Цифровая одежда для игр и соцсетей</h2>
@@ -277,9 +282,9 @@
             Также появляются специальные маркетплейсы и магазины, где можно приобрести "цифровые луки". Нередко они продаются в форме NFT (невзаимозаменяемый токен) так как это надёжный способ закрепить свои права на вещь. 
             Развитие виртуальной одежды позволяет геймифицировать индустрию моды. 
             Покупка цифровых вещей в играх/соцсетях становится новым развлечением, как всеми известный шоппинг в обычных магазинах.
-            Внешне цифровые луки могут быть абсолютно разными: повседневными и самыми необычными.
+            <br>Внешне цифровые луки могут быть абсолютно разными: повседневными и самыми необычными.
             Тут все зависит только от фантазии модельера. "никаких ограничений и только самовыражение! " - главный девиз художников необычных луков. 
-            Создаются модные образы,дизайнерами в цифровом трехмерном виде в специальных программах для 3д-моделирования. 
+            Создаются модные образы, дизайнерами в цифровом трехмерном виде в специальных программах для 3д-моделирования. 
             По прогнозам аналитиков, к 2030 году объем рынка виртуальной одежды составит около 50 млрд. 
             Уже сейчас пользователи тратят на покупку цифровой одежды сотни тысяч. 
             Дополненная реальность подготавливает нас к полному переходу в виртуальное пространство где можно без проблем примерить и купить понравившуюся вещь. 
@@ -287,34 +292,34 @@
             Она будет воздействовать на тренды реальный индустрии, позволит снизить чрезмерного потребление, уменьшить количество утилизируемой одежды и конечно же принесет многомиллионные доходы владельцам популярных брендов.
              </p>
           </div>
-          <img src="./Gamewearnet.jpg" alt="Image 3" class="left-image">
+          <img src="https://i.imgur.com/SVDd40X.jpg" alt="Image 3" class="left-image">
         </div>
       </div>
     </div>
 
-	<h2 style="text-align: center; color: #FF0000;">Пример использования 3д технологий в моде</h2>
-	<div class="model-container">
-  <script type="importmap">
-    {
-      "imports": {
-        "three": "https://unpkg.com/three@0.159.0/build/three.module.js",
-        "three/addons/": "https://unpkg.com/three@0.159.0/examples/jsm/"
+    <h2 style="text-align: center; color: #FF0000;">Пример использования 3д технологий в моде</h2>
+    <div class="model-container">
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.159.0/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three@0.159.0/examples/jsm/"
+        }
       }
-    }
-  </script>
-</head>
-<body>
-  <script type="module">
-    import * as THREE from 'three';
-    import { OBJLoader } from 'three/addons/loaders/OBJLoader.js';
+    </script>
+  </head>
+  <body>
+    <script type="module">
+      import * as THREE from 'three';
+      import { OBJLoader } from 'three/addons/loaders/OBJLoader.js';
+      
+      const scene = new THREE.Scene();
+      const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+      const renderer = new THREE.WebGLRenderer();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      document.body.appendChild(renderer.domElement);
     
-    const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-    const renderer = new THREE.WebGLRenderer();
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    document.body.appendChild(renderer.domElement);
-
-    const loader = new OBJLoader();
+      const loader = new OBJLoader();
     loader.load('https://snowz0t.github.io/head.github.io/manequin_with_cilinder.obj', function (object) {
       const material = new THREE.MeshStandardMaterial({ color: 0xffffff });
       object.traverse(function (child) {
@@ -336,7 +341,7 @@
     scene.add(directionalLight);
     function animate() {
     requestAnimationFrame(animate);
-
+    
     scene.children.forEach(object => {
       if (object instanceof THREE.Object3D) {
         object.rotation.y += 0.01; 
@@ -349,43 +354,49 @@
   animate();
 
   </script>
-	
+     </div>
+
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $(".owl-carousel").owlCarousel({
+        items: 1,
+        loop: true,
+        autoplay: true,
+        autoplayTimeout: 3000, 
+        autoplayHoverPause: true
+      });
+    });
+  </script>
+
     <div class="carousel-section">
       <div class="owl-carousel owl-theme">
         <div class="item">
-          <img src="./image1.png" alt="Image 1">
+          <img src="https://i.imgur.com/Tfjh7Lf.png" alt="Image 1">
         </div>
         <div class="item">
-          <img src="./image2.png" alt="Image 2">
+          <img src="https://i.imgur.com/6EgbAVc.png" alt="Image 2">
         </div>
         <div class="item">
-          <img src="./image3.png" alt="Image 3">
+          <img src="https://i.imgur.com/0jiqcwZ.png" alt="Image 3">
         </div>
         <div class="item">
-          <img src="./image4.png" alt="Image 4">
+          <img src="https://i.imgur.com/zyKbb7O.png" alt="Image 4">
         </div>
         <div class="item">
-          <img src="./image_5.png" alt="Image 5">
+          <img src="https://i.imgur.com/WKJqW1R.jpg" alt="Image 5">
         </div>
-      </div>
-    <div class="footer">
-      <div class="container">
-        <p class="par1">&copy; 2023 ЭЛИТА – ALL RIGHTS RESERVED. <a href="https://nti2035.ru/markets/wearnet" target="_blank"> NTI WearNet</a> <a href="https://nti2035.ru/contacts/" target="_blank">NTI Contacts</a>
-        </p>
+        <div class="item">
+          <img src="https://i.imgur.com/IsRYHdD.png" alt="Image 6">
+        </div>
       </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <script>
-      $(document).ready(function() {
-        $(".owl-carousel").owlCarousel({
-          items: 1,
-          loop: true,
-          autoplay: true,
-          autoplayTimeout: 2000, // 3 seconds per slide
-          autoplayHoverPause: true
-        });
-      });
-    </script>
+  
+        <div class="footer">
+            <p class="par1">&copy; 2023 ЭЛИТА – ALL RIGHTS RESERVED. <a href="https://nti2035.ru/markets/wearnet" target="_blank"> NTI WearNet</a> <a href="https://nti2035.ru/contacts/" target="_blank">NTI Contacts</a>
+            </p>
+        </div>
   </body>
 </html>
