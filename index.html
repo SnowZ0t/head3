@@ -258,7 +258,7 @@
             Уже сейчас пользователи тратят на покупку цифровой одежды сотни тысяч. 
             Дополненная реальность подготавливает нас к полному переходу в виртуальное пространство где можно без проблем примерить и купить понравившуюся вещь. 
             В ближайшем будущем в течении 5-10 лет мы нас ждет настоящая революция в мире моды. 
-            Она будет воздействовать на тренды реальный индустрии,позволит снизить чрезмерного потребление, уменьшить количество утилизируемой одежды и конечно же принесет многомиллионные доходы владельцам популярных брендов.
+            Она будет воздействовать на тренды реальный индустрии, позволит снизить чрезмерного потребление, уменьшить количество утилизируемой одежды и конечно же принесет многомиллионные доходы владельцам популярных брендов.
              </p>
           </div>
           <img src="./Gamewearnet.jpg" alt="Image 3" class="left-image">
@@ -287,16 +287,17 @@
 
     const loader = new OBJLoader();
     loader.load('https://snowz0t.github.io/head.github.io/manequin_with_cilinder.obj', function (object) {
-      const material = new THREE.MeshBasicMaterial({ color: 0xffffff });
+      const material = new THREE.MeshStandardMaterial({ color: 0xffffff });
       object.traverse(function (child) {
         if (child instanceof THREE.Mesh) {
           child.material = material;
         }
       });
+	object.position.set(1, -80, 1);
       scene.add(object);
     });
 
-    camera.position.z = 700;
+    camera.position.z = 800;
 
     const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
     scene.add(ambientLight);
