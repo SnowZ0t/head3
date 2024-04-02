@@ -76,7 +76,7 @@
       document.body.appendChild(renderer.domElement);
     
       const loader = new OBJLoader();
-    loader.load('https://github.com/SnowZ0t/head2/blob/be4b30234ba1d8fcfa8905978297560366f26b55/manequin_with_cilinder.obj', function (object) {
+    loader.load('https://snowz0t.github.io/head.github.io/manequin_with_cilinder.obj', function (object) {
       const material = new THREE.MeshStandardMaterial({ color: 0xffffff });
       object.traverse(function (child) {
         if (child instanceof THREE.Mesh) {
